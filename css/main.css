@@ -211,33 +211,70 @@ main .section__carousel .swiper-slide img {
      object-fit: cover;
 }
 
-main .swiper__control {
+main .section__carousel .swiper__control {
   position: relative;
   margin: 25px 0;
 }
 
-main .swiper__control .swiper-pagination {
+main .section__carousel .swiper__control .swiper-pagination {
   width: 100%;
   left: 0;
 }
 
-main .swiper__control .swiper-pagination .swiper-pagination-bullet {
+main .section__carousel .swiper__control .swiper-pagination .swiper-pagination-bullet {
   margin-right: 8px;
 }
 
-main .swiper__control .swiper-pagination .swiper-pagination-bullet:last-child {
+main .section__carousel .swiper__control .swiper-pagination .swiper-pagination-bullet:last-child {
   margin-right: 0;
 }
 
-main .swiper__control .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+main .section__carousel .swiper__control .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #000;
 }
 
-main .swiper__control .swiper-button-prev {
+main .section__carousel .swiper__control .swiper-button-prev {
   left: 37%;
 }
 
-main .swiper__control .swiper-button-next {
+main .section__carousel .swiper__control .swiper-button-next {
   right: 37%;
+}
+
+main .section__list {
+  padding: 25px 0;
+}
+
+main .section__list .list__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .section__list .list__row > * {
+  -webkit-box-flex: .25;
+      -ms-flex: .25;
+          flex: .25;
+  text-align: center;
+}
+
+main .section__list .list__row > * img {
+  display: inline-block;
+  padding: 7px;
+}
+
+main .section__list .list__row > * a {
+  color: #81b300;
+  font-size: 18px;
+  display: inline-block;
+  padding: 15px 0;
+}
+
+main .section__list .list__row > * p {
+  font-size: 13px;
+  font-size: #888888;
 }
 /*# sourceMappingURL=main.css.map */
