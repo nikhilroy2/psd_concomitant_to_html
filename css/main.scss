@@ -2,10 +2,12 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 // .................Varible..............
 $primary_color: #81b300;
+$gray_color: #999999;
 // .................Varible.............. End
 
 // ....custom html....
@@ -34,7 +36,7 @@ a {
 }
 .brand__logo {
   display: inline-block;
-  color: #999999;
+  color: $gray_color;
   margin-top: 15px;
   @media (min-width: 700px) {
     margin-top: -20px;
@@ -91,6 +93,7 @@ header {
     justify-content: space-between;
     small {
       padding-right: 15px;
+      color: $gray_color;
     }
     & > ul {
       display: flex;
@@ -110,6 +113,7 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      
       & > .nav__ul {
         display: flex;
         flex-wrap: wrap;
@@ -144,8 +148,12 @@ header {
 // ...................Main.................
 main {
   .section__carousel {
-    background: #f2f2f2;
-    padding: 25px;
+    .swiper__wrapper__main{
+      background: #f2f2f2;
+      position: relative;
+      padding: 25px 0;
+
+    }
     .swiper-container {
       width: 100%;
       height: 100%;
@@ -202,28 +210,62 @@ main {
     }
   }
   .section__list{
-    padding: 25px 0;
     .list__row{
+      padding: 25px 0;
       display: flex;
       justify-content: space-between;
+      flex-flow: row wrap;
       & > *{
-        flex: .25;
+        flex-basis: 25%;
         text-align: center;
+        padding: 10px;
+        @media (max-width: 700px){
+          flex-basis: 50%;
+        }
         img{
           display: inline-block;
-          padding: 7px;
         }
         a{
           color: $primary_color;
           font-size: 18px;
           display: inline-block;
-          padding: 15px 0;
+          padding: 10px 0;
         }
         p{
           font-size: 13px;
-          font-size: #888888;
+          color: $gray_color;
+          line-height: 20px;
         }
       }
+      &.list__card__row{
+        & > *{
+          text-align: left!important;
+          .img__wrapper{
+            padding: 4px;
+            border: 1px solid #e2e2e2;
+            img{
+              width: 100%;
+            }
+          }
+          .project__title{
+            color: #444;
+            font-size: 14px;
+            font-weight: normal;
+          }
+          .view__details{
+            text-align: right;
+            a{
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+    hr{
+      background-color: #e2e2e2;
+      border: none;
+      height: 2px;
+      width: 100%;
     }
   }
 }
@@ -231,4 +273,90 @@ main {
 // ...................Main................. End
 
 // ...................Footer.................
+
+footer{
+  .bg__dark{
+    background: #3b3b3b;
+  }
+  .bg__dark--2{
+    background: #2E2E2E;
+  }
+  .list__row{
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    & > *{
+      flex-basis: 25%;
+      padding: 10px;
+      @media (max-width: 700px){
+        flex-basis: 50%;
+      }
+      h3{
+        color: #666666;
+        font-size: 13px;
+        font-weight: normal;
+        margin-bottom: 25px;
+      }
+      ul > *{
+        color: #999999;
+        font-size: 13px;
+        line-height: 20px;
+      }
+      
+    }
+    .quick__links{
+      a{
+        color: $primary_color;
+        padding: 6px 0;
+        display: block;
+        border-bottom: 1px solid #484848;
+      }
+    }
+    .blog__list{
+     .blog__title{
+        color: #999;
+        margin-bottom: 0;
+      }
+      h4{
+        font-size: 11px;
+      }
+      p{
+        font-size: 12px;
+      }
+      .details{
+        text-align: right;
+        a{
+          color: $primary_color
+        }
+      }
+    }
+    .news__later--form{
+      input{
+        background: #1f1f1f;
+        color: #999;
+        border: none;
+        outline: none;
+        display: inline-block;
+        margin-bottom: 15px;
+        padding: 8px;
+        border-radius: 8px;
+        &[type="submit"]{
+          cursor: pointer;
+          color: $primary_color;
+        }
+
+      }
+    }
+
+  }
+  .list__row__last{
+    padding: 20px 0;
+    font-size: 12px;
+    color: #737373;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+}
 // ...................Footer.................End

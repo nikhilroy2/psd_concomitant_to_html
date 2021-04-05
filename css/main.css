@@ -2,6 +2,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 ul,
@@ -105,6 +106,7 @@ header .above__nav {
 
 header .above__nav small {
   padding-right: 15px;
+  color: #999999;
 }
 
 header .above__nav > ul {
@@ -175,9 +177,10 @@ header nav .container__wrapper .nav__search button {
   outline: 1px solid gray;
 }
 
-main .section__carousel {
+main .section__carousel .swiper__wrapper__main {
   background: #f2f2f2;
-  padding: 25px;
+  position: relative;
+  padding: 25px 0;
 }
 
 main .section__carousel .swiper-container {
@@ -241,40 +244,186 @@ main .section__carousel .swiper__control .swiper-button-next {
   right: 37%;
 }
 
-main .section__list {
-  padding: 25px 0;
-}
-
 main .section__list .list__row {
+  padding: 25px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 main .section__list .list__row > * {
-  -webkit-box-flex: .25;
-      -ms-flex: .25;
-          flex: .25;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
   text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 700px) {
+  main .section__list .list__row > * {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
 }
 
 main .section__list .list__row > * img {
   display: inline-block;
-  padding: 7px;
 }
 
 main .section__list .list__row > * a {
   color: #81b300;
   font-size: 18px;
   display: inline-block;
-  padding: 15px 0;
+  padding: 10px 0;
 }
 
 main .section__list .list__row > * p {
   font-size: 13px;
-  font-size: #888888;
+  color: #999999;
+  line-height: 20px;
+}
+
+main .section__list .list__row.list__card__row > * {
+  text-align: left !important;
+}
+
+main .section__list .list__row.list__card__row > * .img__wrapper {
+  padding: 4px;
+  border: 1px solid #e2e2e2;
+}
+
+main .section__list .list__row.list__card__row > * .img__wrapper img {
+  width: 100%;
+}
+
+main .section__list .list__row.list__card__row > * .project__title {
+  color: #444;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+main .section__list .list__row.list__card__row > * .view__details {
+  text-align: right;
+}
+
+main .section__list .list__row.list__card__row > * .view__details a {
+  font-size: 13px;
+}
+
+main .section__list hr {
+  background-color: #e2e2e2;
+  border: none;
+  height: 2px;
+  width: 100%;
+}
+
+footer .bg__dark {
+  background: #3b3b3b;
+}
+
+footer .bg__dark--2 {
+  background: #2E2E2E;
+}
+
+footer .list__row {
+  padding: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+footer .list__row > * {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  padding: 10px;
+}
+
+@media (max-width: 700px) {
+  footer .list__row > * {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+footer .list__row > * h3 {
+  color: #666666;
+  font-size: 13px;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+footer .list__row > * ul > * {
+  color: #999999;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+footer .list__row .quick__links a {
+  color: #81b300;
+  padding: 6px 0;
+  display: block;
+  border-bottom: 1px solid #484848;
+}
+
+footer .list__row .blog__list .blog__title {
+  color: #999;
+  margin-bottom: 0;
+}
+
+footer .list__row .blog__list h4 {
+  font-size: 11px;
+}
+
+footer .list__row .blog__list p {
+  font-size: 12px;
+}
+
+footer .list__row .blog__list .details {
+  text-align: right;
+}
+
+footer .list__row .blog__list .details a {
+  color: #81b300;
+}
+
+footer .list__row .news__later--form input {
+  background: #1f1f1f;
+  color: #999;
+  border: none;
+  outline: none;
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+footer .list__row .news__later--form input[type="submit"] {
+  cursor: pointer;
+  color: #81b300;
+}
+
+footer .list__row__last {
+  padding: 20px 0;
+  font-size: 12px;
+  color: #737373;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=main.css.map */
